@@ -1,12 +1,12 @@
 Feature: Data Table functionality
 
 
-#  Background: Login
-#    Given user should go to login page
-#    And user should login with valid credentials
-#    Then user should login successfully
-#    And user click on Add user button
-#    Then user should land to create new user page
+  Background: Login
+    Given user should go to login page
+    And user should login with valid credentials
+    Then user should login successfully
+    And user click on Add user button
+    Then user should land to create new user page
 
     @table
     Scenario: Verify that admin can create new user in the system

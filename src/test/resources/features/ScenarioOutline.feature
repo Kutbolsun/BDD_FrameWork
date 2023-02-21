@@ -1,7 +1,7 @@
 Feature:Scenario Outline examples
 
 
-  Background: Got to Login page
+  Background: Go to Login page
     Given user should go to login page
   @Outline
   Scenario Outline: Login test

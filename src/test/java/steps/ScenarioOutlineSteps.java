@@ -5,7 +5,8 @@ import io.cucumber.java.en.Then;
 import pages.LoginPage;
 
 
-public class ScenarioOutlineSteps {
+public class ScenarioOutlineSteps{
+
     LoginPage loginPage = new LoginPage();
     @Given("enter in username field {string}")
     public void enter_in_username_field(String username) {

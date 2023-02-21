@@ -1,18 +1,20 @@
 package steps;
 
 import common.ConfigReader;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.DataTableType;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import pages.AdminHomePage;
 import pages.LoginPage;
 import pojo.UserDetails;
 
 import java.util.List;
 import java.util.Map;
 
-public class DataTableSteps {
+public class DataTableSteps{
+
     LoginPage loginPage = new LoginPage();
+    AdminHomePage adminHomePage = new AdminHomePage();
 
 
     @DataTableType
@@ -29,14 +31,15 @@ public class DataTableSteps {
 
     @Given("user should login with valid credentials")
     public void user_should_login_with_valid_credentials() {
-//        loginPage.usernameInput.sendKeys(ConfigReader.getProperty("username"));
-//        loginPage.passwordInput.sendKeys(ConfigReader.getProperty("password"));
-//        loginPage.submitLoginBtn.click();
+        loginPage.usernameInput.sendKeys(ConfigReader.getProperty("username"));
+        loginPage.passwordInput.sendKeys(ConfigReader.getProperty("password"));
+        loginPage.submitLoginBtn.click();
 
     }
 
     @Then("user click on Add user button")
     public void user_click_on_add_user_button() {
+        adminHomePage.addUserBtn.click();
 
     }
 
@@ -51,6 +54,7 @@ public class DataTableSteps {
 //
 //        System.out.println(userDetails.get(1).get(0));
 //        System.out.println(userDetails.get(3).get(3));
+
 
         System.out.println(userDetails.get(3).getFirstname());
 
